@@ -1,0 +1,163 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background-color: #f0f8ff;
+  color: #333;
+}
+
+header {
+  background-color: #1976d2;
+  padding: 20px;
+  text-align: center;
+  color: white;
+  position: relative;
+}
+
+nav a {
+  margin: 0 10px;
+  color: white;
+  text-decoration: none;
+}
+
+.welcome-user {
+  text-align: right;
+  margin-right: 30px;
+  color: #fff;
+  font-weight: bold;
+}
+
+.logout-btn {
+  position: fixed;
+  top: 20px;
+  right: 30px;
+  background-color: #e53935;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.hero {
+  text-align: center;
+  padding: 40px;
+  background-color: #e3f2fd;
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #1976d2;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  margin-top: 20px;
+}
+
+.services {
+  background-color: #ffffff;
+  padding: 30px;
+  text-align: center;
+}
+
+.booking-form {
+  background-color: #e8f5e9;
+  padding: 40px;
+}
+
+form {
+  max-width: 500px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+input, select, textarea, button {
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+button {
+  background-color: #4caf50;
+  color: white;
+  margin-top: 20px;
+  border: none;
+  cursor: pointer;
+}
+
+textarea {
+  resize: vertical;
+}
+
+input[type="checkbox"] {
+  width: auto;
+  margin-right: 8px;
+}
+
+.success-msg {
+  margin-top: 20px;
+  padding: 15px;
+  color: green;
+  background-color: #e8f5e9;
+  border: 1px solid green;
+  border-radius: 5px;
+  display: none;
+  font-weight: bold;
+}
+
+.instructions {
+  background-color: #fff3cd;
+  padding: 30px;
+  margin: 20px auto;
+  max-width: 800px;
+  border-left: 5px solid #ffc107;
+  border-radius: 5px;
+}
+
+.instructions ul {
+  list-style-type: none;
+  padding-left: 10px;
+}
+
+.instructions li {
+  padding: 8px 0;
+  font-size: 16px;
+}
+
+footer {
+  text-align: center;
+  padding: 15px;
+  background-color: #1976d2;
+  color: white;
+}
+
+.login-container {
+  max-width: 400px;
+  margin: 100px auto;
+  background-color: #e3f2fd;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px gray;
+  text-align: center;
+}
+
+.login-container input {
+  width: 100%;
+  padding: 10px;
+  margin-top: 8px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+.error-msg {
+  color: red;
+  margin-top: 10px;
+  font-weight: bold;
+}

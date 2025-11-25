@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Online Health Checkup Booking</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header>
+    <h1>Online Health Checkup Booking Portal</h1>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#services">Services</a>
+      <a href="#booking">Book Now</a>
+    </nav>
+    <div id="welcomeUser" class="welcome-user"></div>
+  </header>
+
+  <button id="logoutBtn" class="logout-btn">Logout</button>
+
+  <section class="hero">
+    <h2>Book Your Health Checkup</h2>
+    <p>Choose your preferred hospital, doctor, and time</p>
+    <a href="#booking" class="btn">Get Started</a>
+  </section>
+
+  <section id="services" class="services">
+    <h2>Health Checkup Packages</h2>
+    <ul>
+      <li>🩺 Basic Health Checkup</li>
+      <li>🧪 Full Body Analysis</li>
+      <li>🍬 Diabetes Panel</li>
+      <li>❤ Cardiac & BP Screening</li>
+    </ul>
+  </section>
+
+  <section id="booking" class="booking-form">
+    <h2>Appointment Booking Form</h2>
+    <form id="checkupForm">
+      <label>Full Name:</label>
+      <input type="text" name="name" required />
+
+      <label>Gender:</label>
+      <select name="gender" required>
+        <option value="">--Select--</option>
+        <option value="Male">Male</option>
+        <option value="Female">Female</option>
+        <option value="Other">Other</option>
+      </select>
+
+      <label>Age:</label>
+      <input type="number" name="age" min="1" max="120" required />
+
+      <label>Email Address:</label>
+      <input type="email" name="email" required />
+
+      <label>Phone Number:</label>
+      <input type="tel" name="phone" required />
+
+      <label>Address:</label>
+      <textarea name="address" rows="2" required></textarea>
+
+      <label>Hospital Name:</label>
+      <select name="hospital" required>
+        <option value="Apollo Hospital">Apollo Hospital</option>
+        <option value="Rainbow Hospital">Rainbow Hospital</option>
+        <option value="Fortis Health">Fortis Health</option>
+      </select>
+
+      <label>Doctor Name:</label>
+      <select name="doctor" required>
+        <option value="Dr. Priya Sharma">Dr. Priya Sharma (General)</option>
+        <option value="Dr. Rajeev Menon">Dr. Rajeev Menon (Cardio)</option>
+        <option value="Dr. Anjali Das">Dr. Anjali Das (Diabetes)</option>
+      </select>
+
+      <label>Checkup Package:</label>
+      <select name="package" required>
+        <option value="Basic">Basic Health Checkup</option>
+        <option value="Full">Full Body Checkup</option>
+        <option value="Diabetes">Diabetes Test</option>
+        <option value="Heart">Heart & BP Test</option>
+      </select>
+
+      <label>Preferred Date:</label>
+      <input type="date" name="date" required />
+
+      <label>Appointment Time:</label>
+      <select name="time" required>
+        <option value="9:00 AM">9:00 AM</option>
+        <option value="11:00 AM">11:00 AM</option>
+        <option value="2:00 PM">2:00 PM</option>
+        <option value="4:00 PM">4:00 PM</option>
+      </select>
+
+      <label>Special Instructions:</label>
+      <textarea name="notes" rows="2" placeholder="e.g., fasting, allergies, etc."></textarea>
+
+      <label>
+        <input type="checkbox" name="terms" required />
+        I agree to the terms and conditions.
+      </label>
+
+      <button type="submit">Confirm Booking</button>
+      <div id="successMessage" class="success-msg"></div>
+    </form>
+  </section>
+
+  <section class="instructions">
+    <h2>Important Instructions for Patients</h2>
+    <ul>
+      <li>🕘 Arrive 15 minutes early.</li>
+      <li>🍽 Fasting for 10–12 hours may be required.</li>
+      <li>💊 Bring previous medical records.</li>
+      <li>📄 Carry ID proof.</li>
+      <li>📱 Keep phone available for confirmation.</li>
+      <li>😷 Notify hospital in case of symptoms.</li>
+    </ul>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Health Booking Portal | Created as a Student Project</p>
+  </footer>
+
+  <script src="script.js"></script>
+  <script>
+    if (!localStorage.getItem("isLoggedIn")) {
+      window.location.href = "login.html";
+    }
+
+    const username = localStorage.getItem("loggedInUser");
+    document.getElementById("welcomeUser").innerHTML = 👋 Welcome, <b>${username}</b>;
+
+    document.getElementById("logoutBtn").addEventListener("click", function () {
+      localStorage.removeItem("isLoggedIn");
+      localStorage.removeItem("loggedInUser");
+      window.location.href = "login.html";
+    });
+  </script>
+</body>
+</html>
+
